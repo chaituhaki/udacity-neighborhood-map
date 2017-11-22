@@ -1,3 +1,21 @@
+var addClass = false;
+var hamburger = document.getElementById('hamburger');
+var map = document.getElementById("cv");
+var side = document.getElementById("side");
+hamburger.addEventListener("click", function(){
+    if(addClass){
+        addClass = false;
+        console.log(map);
+        side.classList.remove("visible");
+        map.classList.remove("changeMargin");
+    }
+    else{
+        addClass= true;
+        side.classList.add('visible');
+        map.classList.add("changeMargin");
+    }
+});
+
 var Location = function(item){
     this.title = ko.observable(item.title);
     this.type = ko.observable(item.type);
@@ -23,6 +41,7 @@ function initMap() {
       populateInfoWindow(this, infowindow)
     });
   }
+
   var populateInfoWindow = function(marker, infowindow){
       if (infowindow.marker != marker) {
           infowindow.marker = marker;
@@ -33,6 +52,5 @@ function initMap() {
             infowindow.marker = null;
           });
       }
-  }
-   
+  }   
 }
