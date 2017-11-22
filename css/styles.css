@@ -4,6 +4,63 @@ html, body {
     padding: 0;
 }
 
-#map {
+body {
+    font-family: 'Oxygen', sans-serif;
+}
+
+.map {
     height: 100%;
+    margin-left: 60px;
+}
+
+.changeMargin {
+    height: 100%;
+}
+
+#side {
+    z-index: 1;
+    position: absolute;
+    display: inline-block;
+    width: 260px;
+    height: 100%;
+    left: -200px;
+    transition: left 0.5s linear;
+    background: #1c4268;
+}
+
+#side.visible {
+    left: 0px;
+}
+
+#side-menu {
+    display: inline-block;
+    position: absolute;
+    width: 200px;
+    height: 100%;
+    
+}
+
+.hamburger {
+    display: block;
+    margin: 10px;
+    padding: 1px;
+    cursor: pointer;
+    float: right;
+}
+
+.hamburger span {
+    width: 30px;
+    margin: 6px;
+    border: 1px solid #94acc4;
+    display: block;
+}
+
+.input {
+    margin: 15px;
+    margin-top: 50px;
+    width: 180px;
+    height: 25px;
+    background: #73b8f0;
+    border: 0px solid #1c4268;
+    border-radius: 10px;
 }
