@@ -37,7 +37,7 @@
         <!--Load JS API ASYNCHRONOUSLY-->
         <script 
             src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBpT_LxuRkK3ADDTHb1SfYLEmZxBKfVruk&callback=initMap"
-            async defer>
+            async defer onerror="googleError()">
         </script>
         <script src="https://code.jquery.com/jquery-3.2.1.min.js"
             integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="

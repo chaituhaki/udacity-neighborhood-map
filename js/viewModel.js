@@ -18,6 +18,9 @@ ViewModel = function(){
             }
             showMarkers();
             filterMarkers();
-        }
+        },
+        error: function(){
+            alert("Couldn't able to connect Foursquare API. Please check your connection");
+         }
     });
 }

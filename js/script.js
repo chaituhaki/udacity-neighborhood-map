@@ -1,6 +1,10 @@
 inputSearch = ko.observable();
 markers = ko.observableArray([]);
 
+googleError = function(){
+  alert("Gouldn't able to reach google maps. Please reload the page");
+}
+
 function initMap() {
   // Calls ViewModel() and binds all the data to respective observavles
   ko.applyBindings(new ViewModel());
