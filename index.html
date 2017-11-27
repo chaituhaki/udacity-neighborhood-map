@@ -2,32 +2,61 @@
 <html>
     <head>
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
         <link rel="stylesheet" href="css/styles.css">
 
         <title>My Neighborhood Map</title>
     </head>
     <body>
+        <!--Side Menu-->
         <div id="side">
             <div id="side-menu">
-                <input class="input" type="text">
+                <input class="input" id="input" type="search" 
+                        data-bind="textInput: inputSearch, valueUpdate: afterkeydown" 
+                        placeholder=" search list">
+                <div class="hr"></div>
+                <ul class="ulist" data-bind="foreach: filterMarkers">
+                    <li class="list" id="list" data-bind="text: title, click: listItemClicked"></li>
+                </ul>
             </div>
-            <div class="hamburger" id="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
+            <!--Hamburger Menu Icon-->
+            <div>
+                <h2 class="head">Restaurants</h2>
+
+                <div class="hamburger" id="hamburger" data-bind="click: toggleVisible">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </div>
         </div>
-        
-        <div id="map" id="cv" class="map"></div>
+        <!--Google Maps-->
+        <div id="map" class="map"></div>
 
-
-        <script src="js/model.js"></script>
-        <script src="js/knockout-3.4.2.js"></script>
-        <script src="js/script.js"></script>
-        <script src="js/viewModel.js"></script>
         <!--Load JS API ASYNCHRONOUSLY-->
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBpT_LxuRkK3ADDTHb1SfYLEmZxBKfVruk&callback=initMap"
-        async defer></script>
+        <script 
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBpT_LxuRkK3ADDTHb1SfYLEmZxBKfVruk&callback=initMap"
+            async defer>
+        </script>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+            crossorigin="anonymous">
+        </script>
+        <script 
+            src="js/knockout-3.4.2.js">
+        </script>
+        <script 
+            src="js/style.js">
+        </script>
+        <script 
+            src="js/model.js">
+        </script>
+        <script 
+            src="js/script.js">
+        </script>
+        <script 
+            src="js/viewModel.js">
+        </script>
     </body>
 </html>
