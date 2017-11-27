@@ -1,7 +1,7 @@
 ViewModel = function(){
     center = ko.observable(mapCenter);
     foursquareList = ko.observableArray([]);
-
+    styles = ko.observableArray(mapStyles);
     $.ajax({
         type: "GET",
         datatype: "json",
