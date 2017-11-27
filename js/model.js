@@ -1,20 +1,5 @@
 var map;
-var mapCenter = {lat: 38.997, lng: 282.544};
+var mapCenter = {lat: 38.96953201293945, lng: -77.38579559326172};
+var clientSecret = "QDUYXHAJVFWYS20VFCJRKDOGHS34PPDBSU4DQVRE3WKOIGW4";
+var clientID = "QUSXCWCL2WTKJ0QZITMUVBWLWGOMUJXFAZST0NFQB5N1K5KU";
 
-var locations = [
-    {
-        title: 'Food',
-        type: 'Restaurant',
-        coordinates: {lat: 38.997, lng: 282.544}
-    },
-    {
-        title: 'Grocery',
-        type: 'Living Quarters',
-        coordinates: {lat: 38.987, lng: 282.594}  
-    },
-    {
-        title: 'Dulles International',
-        type: 'Airport',
-        coordinates: {lat: 38.957, lng: 282.534}  
-    }
-];
