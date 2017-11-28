@@ -10,8 +10,8 @@
     </head>
     <body>
         <!--Side Menu-->
-        <div id="side">
-            <div id="side-menu">
+        <aside id="side">
+            <nav id="side-menu">
                 <input class="input" id="input" type="search" 
                         data-bind="textInput: inputSearch, valueUpdate: afterkeydown" 
                         placeholder=" search list">
@@ -19,7 +19,7 @@
                 <ul class="ulist" data-bind="foreach: filterMarkers">
                     <li class="list" id="list" data-bind="text: title, click: listItemClicked"></li>
                 </ul>
-            </div>
+            </nav>
             <!--Hamburger Menu Icon-->
             <div>
                 <h2 class="head">Restaurants</h2>
@@ -30,7 +30,7 @@
                     <span></span>
                 </div>
             </div>
-        </div>
+        </aside>
         <!--Google Maps-->
         <div id="map" class="map"></div>
 

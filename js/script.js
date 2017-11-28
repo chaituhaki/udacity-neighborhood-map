@@ -48,10 +48,7 @@ var showMarkers = function(){
       marker.addListener('click', function(){
         populateInfoWindow(this, infowindow);
         // Add Bounce animation to marker when clicked
-        this.setAnimation(google.maps.Animation.BOUNCE);
-        setTimeout((function() {
-            this.setAnimation(null);
-        }).bind(this), 1500);
+        animate(this);
       });
     }
 }
@@ -72,10 +69,18 @@ var populateInfoWindow = function(marker, infowindow){
     }
 }
 
+animate = function(marker){
+  marker.setAnimation(google.maps.Animation.BOUNCE);
+  setTimeout((function() {
+      marker.setAnimation(null);
+  }).bind(this), 1500);
+}
+
 // listen to the click on the list in side menu
 // calls populateInfoWindow of the item that is clicked
 function listItemClicked(){
   populateInfoWindow(this, infowindow);
+  animate(this);
 }
 
 // Listen to inputs of the InputSearch() and return list of on objects
