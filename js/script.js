@@ -1,7 +1,7 @@
 inputSearch = ko.observable();
 markers = ko.observableArray([]);
 
-googleError = function(){
+function googleError(){
   alert("Gouldn't able to reach google maps. Please reload the page");
 }
 

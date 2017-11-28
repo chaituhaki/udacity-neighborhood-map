@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
         <link rel="stylesheet" href="css/styles.css">
 
@@ -36,8 +36,8 @@
 
         <!--Load JS API ASYNCHRONOUSLY-->
         <script 
-            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBpT_LxuRkK3ADDTHb1SfYLEmZxBKfVruk&callback=initMap"
-            async defer onerror="googleError()">
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBpT_LxuRkK3ADDTHb1SfYLEmZxBKfVruk"
+            async defer onload="initMap()" onerror="googleError()">
         </script>
         <script src="https://code.jquery.com/jquery-3.2.1.min.js"
             integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
