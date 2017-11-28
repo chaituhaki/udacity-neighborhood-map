@@ -87,3 +87,32 @@ body {
     font-size: .9em;
     margin: 8px;
 }
+
+@media screen and (max-width: 380px){
+    .map {
+        margin-left: 55px;
+    }
+
+    #side {
+        width: 100%;
+        left: -83%;
+    }
+
+    #side-menu {
+        width: 80%;
+        
+    }
+
+    .input {
+        width: 92%;
+    }
+    
+    .hr {
+        width: 92%;
+    }
+    
+    .ulist {
+        margin-left: 15px;
+        width: 95%;
+    }
+}
