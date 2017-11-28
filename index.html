@@ -34,17 +34,12 @@
         <!--Google Maps-->
         <div id="map" class="map"></div>
 
-        <!--Load JS API ASYNCHRONOUSLY-->
-        <script 
-            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBpT_LxuRkK3ADDTHb1SfYLEmZxBKfVruk"
-            async defer onload="initMap()" onerror="googleError()">
-        </script>
         <script src="https://code.jquery.com/jquery-3.2.1.min.js"
             integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
             crossorigin="anonymous">
         </script>
         <script 
-            src="js/knockout-3.4.2.js">
+            src="js/lib/knockout-3.4.2.js">
         </script>
         <script 
             src="js/style.js">
@@ -58,5 +53,11 @@
         <script 
             src="js/viewModel.js">
         </script>
+        <!--Load JS API ASYNCHRONOUSLY-->
+        <script 
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBpT_LxuRkK3ADDTHb1SfYLEmZxBKfVruk"
+            async defer onload="initMap()" onerror="googleError()">
+        </script>
+
     </body>
 </html>

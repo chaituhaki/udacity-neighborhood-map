@@ -22,7 +22,7 @@ var Foursquare = function(item){
   this.name = ko.observable(item.name);
   this.coordinates = ko.observable({lat: item.location.lat,lng: item.location.lng});
   var str = item.location.formattedAddress;
-  this.address = ko.observable(str[0]+",<br>"+str[1]+",<br>"+str[2]);
+  this.address = ko.observable((str[0]? str[0]:'')+",<br>"+(str[1]? str[1]: '')+",<br>"+(str[2]? str[2]: ''));
   // Check whether the Item has categories list in it and assign it to type
   this.type = ko.observable("Type Not Found");
   if(item.categories[0]){
@@ -46,7 +46,12 @@ var showMarkers = function(){
       var bounds = new google.maps.LatLngBounds();
       bounds.extend(marker.position);
       marker.addListener('click', function(){
-        populateInfoWindow(this, infowindow)
+        populateInfoWindow(this, infowindow);
+        // Add Bounce animation to marker when clicked
+        this.setAnimation(google.maps.Animation.BOUNCE);
+        setTimeout((function() {
+            this.setAnimation(null);
+        }).bind(this), 1500);
       });
     }
 }
